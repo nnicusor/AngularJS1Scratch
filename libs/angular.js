@@ -1811,7 +1811,7 @@
      }
      GoodController2.$inject = ['$scope'];
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      div[ng-controller] {
        margin-bottom: 1em;
        -webkit-border-radius: 4px;
@@ -5267,7 +5267,7 @@
                };
              }]);
          </file>
-         <file name="style.css">
+         <file name="styles.css">
          #scrollArea {
            height: 280px;
            overflow: auto;
@@ -5318,7 +5318,7 @@
              }
          ]);
          </file>
-         <file name="style.css">
+         <file name="styles.css">
          body {
            padding-top: 50px;
          }
@@ -5982,7 +5982,7 @@
                  <file name="index.html">
                  <cancel-example></cancel-example>
                  </file>
-                 <file name="style.css">
+                 <file name="styles.css">
                  .red-add, .red-remove {
               transition: all 4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
             }
@@ -6923,7 +6923,7 @@
            };
          }]);
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      p {
          margin: 10px 0 3px;
        }
@@ -23416,7 +23416,7 @@
            ];
          }]);
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      .friends {
          border-collapse: collapse;
        }
@@ -23504,7 +23504,7 @@
            };
          }]);
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      .friends {
          border-collapse: collapse;
        }
@@ -23638,7 +23638,7 @@
            };
          }]);
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      .friends {
          border-collapse: collapse;
        }
@@ -23773,7 +23773,7 @@
            };
          }]);
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      .friends-container {
          display: inline-block;
          margin: 0 30px;
@@ -28060,7 +28060,7 @@
      <input ng-model="style4" placeholder="Type: bold, strike" aria-label="Type: bold, strike"><br>
      <label><input type="checkbox" ng-model="warning"> warning (apply "orange" class)</label>
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      .strike {
            text-decoration: line-through;
        }
@@ -28129,7 +28129,7 @@
      <br>
      <span class="base-class" ng-class="myVar">Sample Text</span>
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      .base-class {
          transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
        }
@@ -28193,7 +28193,7 @@
      </li>
      </ol>
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      .odd {
          color: red;
        }
@@ -28227,7 +28227,7 @@
      </table>
      </div>
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      .odd {
          background: rgba(255, 255, 0, 0.25);
        }
@@ -28303,7 +28303,7 @@
      </li>
      </ol>
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      .odd {
          color: red;
        }
@@ -28337,7 +28337,7 @@
      </table>
      </div>
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      .even {
          background: rgba(255, 255, 0, 0.25);
        }
@@ -30199,7 +30199,7 @@
      * that content using the `$sce` service.
      *
      * <example name="NgModelController" module="customControl" deps="angular-sanitize.js">
-     <file name="style.css">
+     <file name="styles.css">
      [contenteditable] {
         border: 1px solid black;
         background-color: white;
@@ -30560,7 +30560,7 @@
          *       </form>
          *     </div>
          *   </file>
-         <file name="style.css">
+         <file name="styles.css">
          div {
             display: table-cell;
           }
@@ -34403,7 +34403,7 @@
      <span ng-style="myStyle">Sample Text</span>
      <pre>myStyle={{myStyle}}</pre>
      </file>
-     <file name="style.css">
+     <file name="styles.css">
      span {
          color: black;
        }

@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06be8592-b73c-4bcf-87df-c05337e829d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/angular.js" beforeDir="false" afterPath="$PROJECT_DIR$/libs/angular.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -42,7 +39,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Desktop/bdf-github-search-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
@@ -82,6 +79,10 @@
       <workItem from="1566841533516" duration="2730000" />
       <workItem from="1566845964758" duration="3304000" />
       <workItem from="1566924791327" duration="7071000" />
+      <workItem from="1566977610647" duration="476000" />
+      <workItem from="1567019939213" duration="7509000" />
+      <workItem from="1567109260920" duration="3296000" />
+      <workItem from="1567140975912" duration="14879000" />
     </task>
     <servers />
   </component>

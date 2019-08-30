@@ -6,6 +6,7 @@
     <script src="../libs/angular.js"></script>
     <script src="../scripts/script.js"></script>
     <link rel="stylesheet" href="../style/styles.css">
+    <script src="../libs/angular-cookies.js"></script>
 </head>
 <body>
     <div ng-controller="myController">
@@ -13,26 +14,41 @@
             Rows : <input type="number" step="1" min="0" max="40" ng-model="rowLimit"/>
         </label>
         <br /><br />
-        <label>
-            Search for : <input type="text" placeholder="Search employees" ng-model="searchName.login"/>
-        </label>
+        <label>Search for : <input type="text" ng-model="searchName.login"/></label>
         <br /><br />
-        <table id="usersTable">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Node id</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="person in data.users_data | limitTo:rowLimit | orderBy: 'login' | filter: searchName">
-                    <td>{{person.id}}</td>
-                    <td>{{person.login}}</td>
-                    <td>{{person.node_id}}</td>
-            </tbody>
-
-        </table>
+                <table id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Node id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="person in users_data_array.users_data | limitTo:rowLimit | orderBy: 'login' | filter: searchName">
+                            <td>{{person.id}}</td>
+                            <td>{{person.login}}</td>
+                            <td>{{person.node_id}}</td>
+                    </tbody>
+                </table>
+                <table id="reposTable">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Owner</th>
+                        <th>Repo name</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="repo in repos_data_array.repos_data | limitTo:rowLimit ">
+                        <td>{{repo.id}}</td>
+                        <td>{{repo.owner.login}}</td>
+                        <td>{{repo.name}}</td>
+                        <!--<td contenteditable="true" ng-change="saveDescription(repo)" ng-model="description">{{repo.description}}</td>-->
+                        <td><input type="text" ng-value="repo.description" ng-model="repo_description" ng-change="saveDescription(repo_description, repo)"/></td>
+                    </tbody>
+                </table>
     </div>
 </body>
 </html>

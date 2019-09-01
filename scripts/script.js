@@ -11,6 +11,7 @@ angular.module('myModule', ['ngCookies']).controller("myController", ['$scope', 
         // let changed_repos = [];
         let changed_repos = handleCookies.getCookieValue($cookies, 'changed_repos_cookie');
 
+        console.log('Din cokie am primit -> ', changed_repos);
         $http.get('https://api.github.com/repositories')
             .then((response) => {
                 $scope.repos_data_array = {
@@ -20,9 +21,11 @@ angular.module('myModule', ['ngCookies']).controller("myController", ['$scope', 
 
                 if(changed_repos) {
                     for(let i = 0; i < changed_repos.length; ++i) {
-                        const index = handleArrays.binarySearch($scope.repos_data_array.repos_data, changed_repos[1].ID);
-                        if(index) $scope.repos_data_array.repos_data[1].description = changed_repos[1].description;
-
+                        const index = handleArrays.binarySearch($scope.repos_data_array.repos_data, changed_repos[i].ID);
+                        if(index){
+                            console.log('Am gasit index', index);
+                            $scope.repos_data_array.repos_data[index].description = changed_repos[i].description;
+                        }
                     }
                 }
             });
@@ -72,7 +75,7 @@ angular.module('myModule', ['ngCookies']).controller("myController", ['$scope', 
                 objects_string += `${JSON.stringify(cookie_objects[i])},`;
         }
         objects_string += ']';
-        // console.log(5, objects_string);
+        console.log(5, objects_string);
 
         const expireDate = new Date();
         expireDate.setDate(expireDate.getDate() + 100);
@@ -90,16 +93,18 @@ angular.module('myModule', ['ngCookies']).controller("myController", ['$scope', 
     };
 
     this.binarySearch = (array, key) => {
+        //console.log("Binary Search array:", array);
         let left = 0;
         let right = array.length - 1;
 
         let mid;
         while(left <= right) {
-            mid = ( left + right ) / 2;
+            mid = Math.round(( left + right ) / 2);
+            //console.log('Mid setat:', mid);
 
-            if(array[mid] === key) return mid;
+            if(array[mid].id === key) return mid;
 
-            if(array[mid] < key) left = mid + 1;
+            if(array[mid].id < key) left = mid + 1;
             else right = mid - 1;
         }
         return -1;

@@ -1,26 +1,78 @@
-table, th , td  {
-    border: 1px solid grey;
-    border-collapse: collapse;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+body {
+    font-family: 'Roboto';
+    background: #c4d3f6;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 30px 15px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.col-6 {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.input-group + .input-group {
+    margin-left: 30px;
+}
+
+.input-group input {
+    height: 20px;
     padding: 5px;
-}
-table tr:nth-child(odd) {
-    background-color: #f1f1f1;
-}
-table tr:nth-child(even) {
-    background-color: #ffffff;
+    border: 2px solid #ccc;
 }
 
-#usersTable {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-}
-#reposTable {
-    margin-left: auto;
-    margin-right: auto;
+.input-wrapper {
+    display: flex;
 }
 
-#reposTable > td:nth-child(4), td > input {
-    width: 1000px;
+table {
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    border-collapse: collapse;
+    margin-top: 30px;
+    box-shadow: 0  10px 30px rgba(0, 0, 0, 0.2);
 }
 
+tr {
+    text-align: left;
+}
+
+th {
+    padding: 5px;
+    background: #6c7ae0;
+    color: #fff;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+}
+
+td {
+    padding: 5px 5px 10px;
+}
+
+tr:nth-child(odd) {
+    background: #fafafa;
+}
+
+td input {
+    border: none;
+    background: transparent;
+    width: 100%;
+}

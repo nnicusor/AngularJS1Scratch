@@ -14,7 +14,7 @@
             Rows : <input type="number" step="1" min="0" max="40" ng-model="rowLimit"/>
         </label>
         <br /><br />
-        <label>Search for : <input type="text" ng-model="searchName.login"/></label>
+        <label>Search for user: <input type="text" ng-model="searchName.login"/></label>
         <br /><br />
                 <table id="usersTable">
                     <thead>
@@ -31,6 +31,7 @@
                             <td>{{person.node_id}}</td>
                     </tbody>
                 </table>
+        <label>Search for repositori: <input type="text" ng-model="searchRepo.name"/></label>
                 <table id="reposTable">
                     <thead>
                     <tr>
@@ -41,7 +42,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="repo in repos_data_array.repos_data | limitTo:rowLimit ">
+                    <tr ng-repeat="repo in repos_data_array.repos_data | limitTo:rowLimit | filter: searchRepo">
                         <td>{{repo.id}}</td>
                         <td>{{repo.owner.login}}</td>
                         <td>{{repo.name}}</td>
